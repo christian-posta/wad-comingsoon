@@ -1,13 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Wondering About Dinner - Help me decide what to eat!</title>
+    <title>Wondering About Dinner - Help us decide what to eat!</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <meta name="title" content="Wondering About Dinner - Help me decide what to eat"/>
+    <meta name="title" content="Wondering About Dinner - Help us decide what to eat!"/>
     <meta name="description"
           content="WhatAboutDinner.com is launching soon and I want to be the first in line to know when it does! WonderingAboutDinner helps you and your dinner partner decide what to eat for dinner.">
 
     <link rel="stylesheet" type="text/css" href="media/css/style.css" media="all">
+
+    <script type="text/javascript" src="media/js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="media/js/jquery.fullbg.min.js"></script>
 </head>
 <body>
 
@@ -18,8 +21,10 @@
     <div id="content">
 
         <div id="logo"></div>
-        <div id="tagline"></div>
-        <div id="description"></div>
+        <div id="tagline">Help us decide what to eat!</div>
+        <div id="description">Share your dinner thoughts with us and we help you decide.</div>
+        <p id="invitelist"><em>Launching soon. Enter your email to join our invite list:</em></p>
+
 
         <div id="mail-chimp">
             <!-- Begin MailChimp Signup Form -->
@@ -33,17 +38,16 @@
                       method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
                       target="_blank">
                     <div class="mc-field-group">
-                        <label for="mce-EMAIL">Email Address <strong class="note-required">*</strong>
-                        </label>
                         <input type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                    </div>
+                    <div>
+                        <input type="image" value="" name="subscribe" id="mc-embedded-subscribe" class="btn" src="media/images/go.png">
                     </div>
                     <div id="mce-responses">
                         <div class="response" id="mce-error-response" style="display:none"></div>
                         <div class="response" id="mce-success-response" style="display:none"></div>
                     </div>
-                    <div>
-                        <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="btn">
-                    </div>
+
                 </form>
             </div>
             <script type="text/javascript">
@@ -122,6 +126,10 @@
                         $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
                         options = { url: 'http://christianposta.us2.list-manage.com/subscribe/post-json?u=8e4db41801fb68e5eb333d966&id=81c3312b52&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
                             beforeSubmit: function() {
+                                // make the submit button unclickable and show a wait gif
+
+                                $('#mc-embedded-subscribe').prop('disabled', true);
+                                $('#mc-embedded-subscribe').prop('src', 'media/images/wait20trans.gif');
                                 $('#mce_tmp_error_msg').remove();
                                 $('.datefield', '#mc_embed_signup').each(
                                         function() {
@@ -149,6 +157,7 @@
                                                         }
                                                     });
                                         });
+
                                 return mce_validator.form();
                             },
                             success: mce_success_cb
@@ -158,6 +167,9 @@
                     });
                 }
                 function mce_success_cb(resp) {
+                    $('#mc-embedded-subscribe').prop('disabled', false);
+                    $('#mc-embedded-subscribe').prop('src', 'media/images/go.png');
+
                     $('#mce-success-response').hide();
                     $('#mce-error-response').hide();
                     if (resp.result == "success") {
@@ -225,13 +237,14 @@
             </script>
             <!--End mc_embed_signup-->
         </div>
-
+        <div id="cp-creation">
+            a <a href="http://www.christianposta.com/">christian posta</a> creation
+        </div>
     </div>
 
 </div>
 
-<script type="text/javascript" src="media/js/jquery-1.6.2.min.js"></script>
-<script type="text/javascript" src="media/js/jquery.fullbg.min.js"></script>
+
 <script type="text/javascript">
     $(function() {
         $('#big-image').fullBg();

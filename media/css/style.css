@@ -3,6 +3,10 @@ html {
     color: #A0A0A0;
 }
 
+a, a:visited, a:link, a:hover, a:active {
+    color: #8498AC;
+}
+
 body {
     color: #A0A0A0;
     font-family: arial, verdana, sans;
@@ -26,7 +30,10 @@ body {
     position: relative;
     margin: 110px auto 0 auto;
     background: transparent url('../images/content_bg.png') 0 0 repeat;
-    padding: 20px 20px 1px 20px;
+    padding: 20px;
+    -moz-border-radius: 5px; /* FF1+ */
+    -webkit-border-radius: 5px; /* Saf3-4 */
+    border-radius: 5px; /* Opera 10.5, IE9, Saf5, Chrome */
 }
 
 /* for the javascript that manages the full size background */
@@ -49,4 +56,75 @@ body {
     width: 50px;
     height: 25px;
     vertical-align: middle;
+}
+
+#mce-EMAIL {
+    border:0;
+    font: 14px bold helvetica, arial, sans-serif;
+    width: 255px;
+    float:left;
+    color:#333;
+    margin: 5px 7px 5px 0;
+    padding:5px 10px;
+    -moz-border-radius: 5px; /* FF1+ */
+    -webkit-border-radius: 5px; /* Saf3-4 */
+    border-radius: 5px; /* Opera 10.5, IE9, Saf5, Chrome */
+    outline:none;
+}
+
+#tagline {
+    color: #FFF;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    margin: 15px 0 20px;
+}
+
+#description {
+    text-align: left;
+}
+
+#content p#invitelist {
+    font-family: Georgia, Times, serif;
+    color: #E9E9E9;
+    text-align: left;
+    font-size: .78em;
+}
+
+#mce-responses {
+    top: -1.4em;
+    padding: 0em .5em 0em .5em;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 5%;
+    text-align: left;
+}
+
+#mce-error-response {
+    display: none;
+    margin: 1em 0;
+    padding: 1em .5em .5em 0;
+    font-weight: bold;
+    top: -1.5em;
+    z-index: 1;
+    width: 80%;
+    color: #D12F19;
+}
+
+#mce-success-response {
+    display: none;
+    margin: 1em 0;
+    padding: 1em .5em .5em 0;
+    font-weight: bold;
+    top: -1.5em;
+    z-index: 1;
+    width: 80%;
+    color: #529214;
+}
+
+#cp-creation {
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: right;
+    margin-top: 20px;1
 }
