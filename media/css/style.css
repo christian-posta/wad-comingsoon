@@ -38,16 +38,10 @@ body {
 
 /* for the javascript that manages the full size background */
 .fullBg {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	overflow: hidden;
-}
-
-#big-image {
-    position: absolute;
-    top: 0px;
-    left: 0px;
 }
 
 #mc-embedded-subscribe {
