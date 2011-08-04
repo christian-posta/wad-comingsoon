@@ -75,6 +75,7 @@ body {
 #tagline {
     color: #FFF;
     font-weight: bold;
+    font-size: 20px;
     width: 100%;
     text-align: left;
     margin: 15px 0 20px;
@@ -126,5 +127,5 @@ body {
     font-size: 12px;
     color: #FFFFFF;
     text-align: right;
-    margin-top: 20px;1
+    margin-top: 20px;
 }

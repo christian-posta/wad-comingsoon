@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Wondering About Dinner - Help us decide what to eat!</title>
+    <title>Wondering About Dinner - What are we eating for dinner tonight!?</title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <meta name="title" content="Wondering About Dinner - Help us decide what to eat!"/>
+    <meta name="title" content="Wondering About Dinner - What are we eating for dinner tonight!?"/>
     <meta name="description"
           content="WhatAboutDinner.com is launching soon and I want to be the first in line to know when it does! WonderingAboutDinner helps you and your dinner partner decide what to eat for dinner.">
 
@@ -21,8 +21,8 @@
     <div id="content">
 
         <div id="logo"></div>
-        <div id="tagline">Help us decide what to eat!</div>
-        <div id="description">Share your dinner thoughts with us and we help you decide.</div>
+        <div id="tagline">What's for dinner tonight!?</div>
+        <div id="description">Share your <b> dinner thought</b>s with us and we help you <b>decide</b></div>
         <p id="invitelist"><em>Launching soon. Enter your email to join our invite list:</em></p>
 
 
@@ -127,9 +127,9 @@
                         options = { url: 'http://christianposta.us2.list-manage.com/subscribe/post-json?u=8e4db41801fb68e5eb333d966&id=81c3312b52&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
                             beforeSubmit: function() {
                                 // make the submit button unclickable and show a wait gif
+                                $('#mce-EMAIL').prop('disabled', true);
+                                $('#mce-EMAIL').prop('src', 'media/images/wait20trans.gif');
 
-                                $('#mc-embedded-subscribe').prop('disabled', true);
-                                $('#mc-embedded-subscribe').prop('src', 'media/images/wait20trans.gif');
                                 $('#mce_tmp_error_msg').remove();
                                 $('.datefield', '#mc_embed_signup').each(
                                         function() {
