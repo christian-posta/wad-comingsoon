@@ -69,10 +69,11 @@ body {
 #tagline {
     color: #FFF;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
     width: 100%;
     text-align: left;
     margin: 15px 0 20px;
+    text-align: center;
 }
 
 #description {
@@ -115,11 +116,4 @@ body {
     z-index: 1;
     width: 80%;
     color: #529214;
-}
-
-#cp-creation {
-    font-size: 12px;
-    color: #FFFFFF;
-    text-align: right;
-    margin-top: 20px;
 }
