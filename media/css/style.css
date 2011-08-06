@@ -34,6 +34,7 @@ body {
     -moz-border-radius: 5px; /* FF1+ */
     -webkit-border-radius: 5px; /* Saf3-4 */
     border-radius: 5px; /* Opera 10.5, IE9, Saf5, Chrome */
+    z-index: 1000;
 }
 
 /* for the javascript that manages the full size background */
@@ -42,6 +43,7 @@ body {
 	top: 0;
 	left: 0;
 	overflow: hidden;
+    z-index: -100;
 }
 
 #mc-embedded-subscribe {
